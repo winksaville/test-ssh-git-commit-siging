@@ -1,8 +1,8 @@
 # Test signing
 
-This is a second commit we're going to see if
-using `git gui` automatically signs, I think it
-should because we have `commit.gpgsign = true`
-in ~/.gitconfig.
+Signing using an ssh-key
 
-Yes it did!
+## Tests
+ * Signing using `git commit -S -m "xxx"` works
+ * After setting `git config --global commit.gpgsign=true` Autosigning works when commiting from command line or `git gui` and probably vscode.
+ * Verify modifing README.md via github does **NOT** sign as it doesn't have the private key.
